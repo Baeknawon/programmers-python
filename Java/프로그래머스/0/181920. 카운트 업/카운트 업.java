@@ -1,12 +1,9 @@
-import java.util.*;
 class Solution {
     public int[] solution(int start_num, int end_num) {
-        ArrayList<Integer> answer = new ArrayList<>();
-        for(int i = start_num; i <= end_num; i++){
-            answer.add(i);
+        int[] answer = new int[end_num - start_num + 1];
+        for(int i = 0; i<= end_num - start_num; i++){
+            answer[i] = i + start_num;
         }
-        int arr[] = answer.stream().mapToInt(i -> i).toArray();
-        
-        return arr;
+        return answer;
     }
 }
